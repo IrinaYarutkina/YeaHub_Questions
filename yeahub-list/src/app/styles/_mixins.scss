@@ -1,0 +1,21 @@
+$font_family: "Manrope";
+
+@mixin flex($display, $direction, $justify_content, $align_items) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+@mixin font($size, $weight) {
+  font-family: $font_family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin button($height, $padding, $border, $border-radius) {
+  height: $height;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+}
