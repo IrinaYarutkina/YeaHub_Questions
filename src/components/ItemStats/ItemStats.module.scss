@@ -1,0 +1,26 @@
+@use "../../styles/mixins" as *;
+
+.item {
+  background-color: var(--grey-bg-color);
+  padding: 6px 10px;
+  display: inline-flex;
+  border-radius: 8px;
+
+  .container {
+    @include flex(flex, row, space-between, center);
+    gap: 10px;
+
+    .item_text {
+      @include font(14px, 600);
+      color: var(--black-text2);
+    }
+    .item_level {
+      background-color: var(--accent-color);
+      display: inline-flex;
+      border-radius: 4px;
+      padding: 2px 4px;
+      @include font(14px, 600);
+      color: var(--white-color);
+    }
+  }
+}
