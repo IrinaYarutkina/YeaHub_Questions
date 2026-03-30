@@ -1,11 +1,11 @@
 import { Header } from "@/widgets/Header";
-import QuestionCard from "@/components/QuestionCard/QuestionCard";
+import { QuestionsList } from "@/widgets/questionsList/QuestionsList";
 
 function App() {
   return (
     <>
       <Header />
-      <QuestionCard />
+      <QuestionsList />
     </>
   );
 }

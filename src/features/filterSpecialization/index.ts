@@ -1,0 +1,1 @@
+export { FilterSpecialization } from "./FilterSpecialization";

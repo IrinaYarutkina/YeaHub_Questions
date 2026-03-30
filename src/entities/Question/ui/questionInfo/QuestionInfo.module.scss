@@ -1,0 +1,23 @@
+@use "@/app/styles/mixins" as *;
+
+.Question_InfoContainer {
+  background-color: var(--grey-bg-color);
+  padding: 6px 10px;
+  display: inline-flex;
+  border-radius: 8px;
+  @include flex(flex, row, space-between, center);
+  gap: 10px;
+
+  .Question_InfoText {
+    @include font(14px, 600);
+    color: var(--black-text2);
+  }
+  .Question_InfoLevel {
+    background-color: var(--accent-color);
+    display: inline-flex;
+    border-radius: 4px;
+    padding: 2px 4px;
+    @include font(14px, 600);
+    color: var(--white-color);
+  }
+}

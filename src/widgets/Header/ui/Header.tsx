@@ -1,6 +1,6 @@
-import logo from "@/assets/logo.svg";
-import logo_text from "@/assets/logo_text.svg";
-import styles from "@/components/Header/Header.module.scss";
+import logo from "@/shared/assets/logo.svg";
+import logo_text from "@/shared/assets/logo_text.svg";
+import styles from "./Header.module.scss";
 
 export const Header = function () {
   return (

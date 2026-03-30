@@ -1,13 +1,13 @@
-@use "../../styles/mixins" as *;
+@use "../../../shared/styles/mixins.scss" as m;
 .header {
   background-color: var(--white-color);
 
   .container {
     padding: 8px 0 8px;
-    @include flex(flex, row, space-between, center);
+    @include m.flex(flex, row, space-between, center);
 
     .header_nav {
-      @include flex(flex, row, space-between, center);
+      @include m.flex(flex, row, space-between, center);
       gap: 30px;
       .link {
         display: flex;
@@ -15,15 +15,15 @@
         gap: 8px;
       }
       .header_menu {
-        @include flex(flex, row, space-between, center);
-        @include font(16px, 500);
+        @include m.flex(flex, row, space-between, center);
+        @include m.font(16px, 500);
         color: var(--black-text1);
         gap: 20px;
       }
     }
     .header_btnWhite {
-      @include button(48px, 15px 30px 15px 30px, none, 12px);
-      @include font(16px, 600);
+      @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+      @include m.font(16px, 600);
 
       background-color: #ffffff00;
       color: var(--accent-color);
@@ -31,8 +31,8 @@
     }
 
     .header_btnPurple {
-      @include button(48px, 15px 30px 15px 30px, none, 12px);
-      @include font(18px, 500);
+      @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+      @include m.font(18px, 500);
 
       background-color: var(--accent-color);
       color: var(--white-color);

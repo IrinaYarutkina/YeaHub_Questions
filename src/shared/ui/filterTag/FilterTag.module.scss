@@ -1,0 +1,12 @@
+@use "../../../shared/styles/mixins.scss" as m;
+.withoutIcons_default {
+  padding: 6px 12px;
+  background: var(--white-color);
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid #bababa;
+}
+.text {
+  @include m.font(16px, 500);
+  color: #303030;
+}
