@@ -1,12 +1,26 @@
 @use "../../../shared/styles/mixins.scss" as m;
-.withoutIcons_default {
+
+.buttonTag {
+  display: inline-flex;
   padding: 6px 12px;
   background: var(--white-color);
-  gap: 8px;
   border-radius: 12px;
   border: 1px solid #bababa;
+  color: #303030;
 }
+.buttonTag:hover {
+  background: #6f20fb;
+  color: #ffffff;
+}
+.withIcons {
+  gap: 6px;
+}
+
 .text {
   @include m.font(16px, 500);
-  color: #303030;
+  white-space: nowrap;
+}
+.icon {
+  width: 30px;
+  height: 30px;
 }

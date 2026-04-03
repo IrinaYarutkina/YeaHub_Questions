@@ -1,8 +1,11 @@
 @use "../../shared/styles/mixins.scss" as m;
 
-.filter_section {
+.skills {
   @include m.flex(flex, column, flex-start, flex-start);
-  gap: 24px;
-  padding: 24px;
-  border-radius: 24px;
+  gap: 8px;
+}
+.filter_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }

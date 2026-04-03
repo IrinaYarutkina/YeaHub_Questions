@@ -1,0 +1,14 @@
+@use "../../styles/mixins.scss" as m;
+
+.SearchInput {
+  padding: 10px;
+  height: 48px;
+  width: 344px;
+  border-radius: 68px;
+  border: 1px solid #e8e8e8;
+}
+
+.SearchInput::placeholder {
+  @include m.font(16px, 400);
+  color: #a3a3a3;
+}

@@ -1,0 +1,12 @@
+@use "../../../shared/styles/mixins.scss" as m;
+
+.button_toggle {
+  color: #5509cc;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  @include m.font(14px, 400);
+}
+.button_toggle:hover {
+  text-decoration: underline;
+}

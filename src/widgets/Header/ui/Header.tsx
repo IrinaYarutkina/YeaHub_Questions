@@ -1,5 +1,5 @@
-import logo from "@/shared/assets/logo.svg";
-import logo_text from "@/shared/assets/logo_text.svg";
+import logo from "@/shared/assets/icons/logo.svg";
+import logo_text from "@/shared/assets/icons/logo_text.svg";
 import styles from "./Header.module.scss";
 
 export const Header = function () {

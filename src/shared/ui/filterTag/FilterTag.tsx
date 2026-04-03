@@ -2,13 +2,20 @@ import styles from "./FilterTag.module.scss";
 type Props = {
   children: string;
   icon?: string;
+  className?: string;
 };
 
-export const FilterTag = ({ children, icon }: Props) => {
+export const FilterTag = ({ children, icon, className }: Props) => {
   return (
-    <button type="button" className={styles.withoutIcons_default}>
+    <button
+      type="button"
+      className={`${styles.buttonTag}  ${
+        icon ? styles.withIcons : styles.withoutIcons_default
+      }
+      ${className || ""}`}
+    >
       {icon && <img src={icon} alt="" className={styles.icon} />}
-      <p className={styles.text}> {children}</p>
+      <span className={styles.text}> {children}</span>
     </button>
   );
 };

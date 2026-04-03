@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import styles from "./Accordeon.module.scss";
-import arrow from "@/shared/assets/arrow.svg";
+import arrow from "@/shared/assets/icons/arrow.svg";
 import { useToggle } from "@/shared/lib/hooks/useToggle";
 
 type Props = {
