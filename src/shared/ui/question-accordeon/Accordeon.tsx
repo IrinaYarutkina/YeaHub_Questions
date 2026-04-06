@@ -12,7 +12,7 @@ type Props = {
 
 export const Accordeon = function ({
   title,
-  children = "gghjghjghgkjbn nhgygyghvbn",
+  children,
   initialValue = false,
   maxHeight = "500px",
 }: Props) {
@@ -26,7 +26,6 @@ export const Accordeon = function ({
         aria-expanded={isToggled}
       >
         <div className={styles.question}>
-          <span className={styles.dot}></span>
           <h2 className={styles.title}>{title} </h2>
         </div>
         <div>

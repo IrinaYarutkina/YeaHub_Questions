@@ -24,3 +24,9 @@ export type Question = {
   // createdBy: string;
   // updatedBy: string;
 };
+export type QuestionsResponse = {
+  data: Question[];
+  page: number;
+  limit: number;
+  total: number;
+};

@@ -1,0 +1,28 @@
+@use "../../styles/mixins.scss" as m;
+.btn_arrow {
+  background-color: transparent;
+  border: none;
+}
+
+.pagination {
+  @include m.flex(flex, row, center, center);
+  gap: 4px;
+}
+.numbersPages {
+  @include m.flex(flex, row, center, center);
+  gap: 10px;
+}
+.inactive {
+  border: none;
+  background: transparent;
+  color: #474747;
+  @include m.font(14px, 500);
+}
+.active {
+  color: #ffffff;
+  background-color: #6a0bff;
+  border-radius: 2px;
+  border: none;
+  padding: 2px 6px;
+  @include m.font(14px, 600);
+}

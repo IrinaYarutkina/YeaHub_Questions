@@ -1,13 +1,13 @@
 import { Header } from "@/widgets/Header";
-import { QuestionsList } from "@/widgets/questionsList/QuestionsList";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import { BaseQuestions } from "@/pages/QuestionsList/BaseQuestions";
 function App() {
   return (
     <>
       <Provider store={store}>
         <Header />
-        <QuestionsList />
+        <BaseQuestions />
       </Provider>
     </>
   );
