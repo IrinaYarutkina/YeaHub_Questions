@@ -1,0 +1,67 @@
+@use "../../../../shared/styles/mixins.scss" as m;
+.answer_container{
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.10);
+  @include m.flex(flex, column, flex-start, flex-start );
+  gap: 20px;
+  padding: 24px;
+}
+
+
+.title{
+  @include m.font(20px, 500)
+}
+
+.answer_content{
+  @include m.font(16px, 500);
+}
+
+/* inline code */
+.answer_content p code,
+.answer_content li code {
+  color: green;
+  @include m.font(18px, 600);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* code block */
+.answer_content pre {
+  background-color: #384150;
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+/* code inside block */
+.answer_content pre code {
+  color: white;
+  line-height: 1.6;
+  display: block;
+}
+
+.btn_Expand{
+  border: none;
+  background-color: transparent;
+  @include m.font(14px, 400);
+  color: #303030;
+  display: flex;
+  align-items: center;  
+  gap: 4px; 
+}
+
+.btn_Expand:hover {
+  color: #6A0BFF;
+}
+
+.arrow_close {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.arrow_open {
+  transform: rotate(180deg);
+}

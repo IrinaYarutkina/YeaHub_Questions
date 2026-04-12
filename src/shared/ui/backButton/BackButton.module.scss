@@ -1,0 +1,19 @@
+@use "../../styles/mixins.scss" as m;
+
+.backButton{
+  @include m.flex(flex, row, start, center);
+  gap: 4px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #6A0BFF;
+  display: block; 
+}
+.title{
+  color: #6A0BFF;
+}
+.title:hover{
+  color: #5509CC;
+}

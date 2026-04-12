@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import styles from "./Container.module.css";
+import styles from "./Container.module.scss";
 
 type ContainerProps = {
   children: ReactNode;
@@ -7,5 +7,13 @@ type ContainerProps = {
 };
 
 export const Container = ({ children, className = "" }: ContainerProps) => {
-  return <div className={`${styles.container} ${className}`}>{children}</div>;
+  return (
+    <div
+      className={`
+      ${styles.container} 
+      ${className}`}
+    >
+      {children}
+    </div>
+  );
 };

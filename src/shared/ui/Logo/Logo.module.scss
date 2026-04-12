@@ -1,0 +1,5 @@
+@use "../../styles/mixins.scss" as m;
+.logo {
+  @include m.flex(flex, row, space-between, center);
+  gap: 8px;
+}

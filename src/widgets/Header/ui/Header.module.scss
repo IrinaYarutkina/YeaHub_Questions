@@ -1,42 +1,92 @@
 @use "../../../shared/styles/mixins.scss" as m;
 .header {
   background-color: var(--white-color);
-
-  .container {
-    padding: 8px 0 8px;
-    @include m.flex(flex, row, space-between, center);
-
-    .header_nav {
-      @include m.flex(flex, row, space-between, center);
-      gap: 30px;
-      .link {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .header_menu {
-        @include m.flex(flex, row, space-between, center);
-        @include m.font(16px, 500);
-        color: var(--black-text1);
-        gap: 20px;
-      }
-    }
-    .header_btnWhite {
-      @include m.button(48px, 15px 30px 15px 30px, none, 12px);
-      @include m.font(16px, 600);
-
-      background-color: #ffffff00;
-      color: var(--accent-color);
-      line-height: 1;
-    }
-
-    .header_btnPurple {
-      @include m.button(48px, 15px 30px 15px 30px, none, 12px);
-      @include m.font(18px, 500);
-
-      background-color: var(--accent-color);
-      color: var(--white-color);
-      line-height: 1;
-    }
-  }
 }
+.header_container {
+  padding: 8px 0;
+  @include m.flex(flex, row, space-between, center);
+}
+.header_menu {
+  @include m.flex(flex, row, space-between, center);
+  gap: 40px;
+}
+.header_nav {
+  @include m.flex(flex, row, space-between, center);
+  gap: 20px;
+}
+.header_label {
+  @include m.font(16px, 500);
+  color: #191919;
+}
+.header_label:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+.mob_prep {
+  display: none;
+  position: relative;
+}
+.header_btn {
+  @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+  line-height: 1;
+  border: none;
+}
+.header_btnWhite {
+  @include m.font(16px, 600);
+  background-color: #ffffff00;
+  color: var(--accent-color);
+}
+.header_btnWhite:hover {
+  text-decoration: underline;
+  color: #5509cc;
+}
+.header_btnPurple {
+  @include m.font(18px, 500);
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.header_btnPurple:hover {
+  background-color: #5509cc;
+}
+//   .container {
+//     padding: 8px 0 8px;
+//     @include m.flex(flex, row, space-between, center);
+
+//     .header_nav {
+//       @include m.flex(flex, row, space-between, center);
+//       gap: 30px;
+//       .link {
+//         display: flex;
+//         align-items: center;
+//         gap: 8px;
+//       }
+//       .header_menu {
+//         @include m.flex(flex, row, space-between, center);
+//         @include m.font(16px, 500);
+//         color: var(--black-text1);
+//         gap: 20px;
+//       }
+//     }
+//     .header_btnWhite {
+//       @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+//       @include m.font(16px, 600);
+
+//       background-color: #ffffff00;
+//       color: var(--accent-color);
+//       line-height: 1;
+//     }
+
+//     .header_btnPurple {
+//       @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+//       @include m.font(18px, 500);
+
+//       background-color: var(--accent-color);
+//       color: var(--white-color);
+//       line-height: 1;
+//     }
+//   }
+// }
+// .mob_btn {
+//   position: relative;
+//   display: none;
+// }

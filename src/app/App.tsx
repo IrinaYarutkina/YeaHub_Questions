@@ -1,13 +1,12 @@
-import { Header } from "@/widgets/Header";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import { BaseQuestions } from "@/pages/QuestionsList/BaseQuestions";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/router";
 function App() {
   return (
     <>
       <Provider store={store}>
-        <Header />
-        <BaseQuestions />
+        <RouterProvider router={router} />
       </Provider>
     </>
   );

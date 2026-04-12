@@ -1,0 +1,11 @@
+@use '../../shared/styles/mixins.scss' as m;
+.questionWidget_Block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.nav_backButton{
+  display: flex;
+  margin-top: 20px;
+}

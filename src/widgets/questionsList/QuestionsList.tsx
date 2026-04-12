@@ -1,8 +1,8 @@
-import { Accordeon } from "@/shared/ui/question-accordeon/Accordeon";
 import styles from "./QuestionsList.module.scss";
 import { useGetQuestionsQuery } from "@/entities/Questions/api/questionsApi";
 import { Pagination } from "@/shared/ui/pagination";
 import { useState } from "react";
+import { QuestionInfo } from "@/entities/Questions/ui/questionInfo";
 
 export const QuestionsList = function () {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,13 +13,17 @@ export const QuestionsList = function () {
 
   if (isLoading) return <p> Загрузка!</p>;
   return (
-    <div className={styles.container}>
+    <div className={styles.container_wrap}>
       <div className={styles.questions}>
         <h1 className={styles.title}> Вопросы {} </h1>
         <ul className={styles.list}>
           {questions.map((item) => (
             <li key={item.id}>
-              <Accordeon title={item.title} children={item.shortAnswer} />
+              <QuestionInfo
+                title={item.title}
+                shortAnswer={item.shortAnswer}
+                id={item.id}
+              />
             </li>
           ))}
         </ul>

@@ -39,8 +39,9 @@ export const Accordeon = function ({
         </div>
       </button>
       <div
-        className={`${styles.answer_wrap} 
-        ${isToggled ? styles.answer_open : ""}`}
+        className={`${styles.answer_wrap} ${
+          isToggled ? styles.answer_open : ""
+        }`}
         style={isToggled ? { maxHeight } : undefined}
         aria-hidden={!isToggled}
       >
