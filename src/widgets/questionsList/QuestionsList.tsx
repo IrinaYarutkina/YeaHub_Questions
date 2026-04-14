@@ -11,6 +11,17 @@ export const QuestionsList = function () {
   const questions = data?.data ?? [];
   const totalPages = Math.ceil((data?.total ?? 0) / (data?.limit ?? 1));
 
+
+  // const [filters, setFilters] = useState({
+  //   specializationId: null,
+  //   skillIds: [],
+  //   complexity: [],
+  //   rating: null,
+  //   search: "",
+  // });
+
+  // const filteredQuestions = useFilteredQuestions(questions, filters);
+
   if (isLoading) return <p> Загрузка!</p>;
   return (
     <div className={styles.container_wrap}>

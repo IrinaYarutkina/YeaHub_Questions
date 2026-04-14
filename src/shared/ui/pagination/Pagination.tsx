@@ -1,6 +1,6 @@
-import { ArrowBack } from "@/shared/assets/icons/ArrowBack";
+import { ArrowBack } from "@/shared/assets/components/ArrowBack";
 import styles from "./Pagination.module.scss";
-import { ArrowNext } from "@/shared/assets/icons/ArrowNext";
+import { ArrowNext } from "@/shared/assets/components/ArrowNext";
 
 type PropsPagination = {
   currentPage: number;

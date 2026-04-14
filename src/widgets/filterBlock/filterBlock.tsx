@@ -1,7 +1,5 @@
-import { FilterSpecialization } from "@/features/filterSpecialization";
-import { FilterSkills } from "@/features/filterSkills/FilterSkills";
-import { FilterLevel } from "@/features/filterLevel";
-import { FilterRate } from "@/features/filterRate";
+import { FilterLevel, FilterRate, FilterSkills, FilterSpecialization } from "@/features/filters";
+
 import styles from "./filterBlock.module.scss";
 import { SearchInput } from "@/shared/ui/searchInput";
 

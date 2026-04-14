@@ -10,6 +10,8 @@ type Props = {
 
 export const QuestionNextBack = ({prevId, nextId} : Props) => { 
   const {goPrev, goNext} = useQuestionNavigation({prevId, nextId})
+
+
 return (
   <div className={styles.container}> 
     <button 

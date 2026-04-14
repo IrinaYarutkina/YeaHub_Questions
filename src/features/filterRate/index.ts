@@ -1,1 +1,0 @@
-export { FilterRate } from "./FilterRate";

@@ -1,14 +1,26 @@
 @use "../../styles/mixins.scss" as m;
 
-.SearchInput {
-  padding: 10px;
-  height: 48px;
-  width: 344px;
+.input_container{
+  display: flex;
+	align-items: center;
+  gap: 8px;
   border-radius: 68px;
   border: 1px solid #e8e8e8;
+  padding: 10px;
+  width: 100%;
 }
 
-.SearchInput::placeholder {
+.input_container:focus-within{
+  border: 1px solid #6A0BFF;
+  outline: none;
+}
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.searchInput::placeholder {
   @include m.font(16px, 400);
   color: #a3a3a3;
 }

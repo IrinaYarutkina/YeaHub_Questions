@@ -11,11 +11,18 @@
 .buttonTag:hover {
   background: #6f20fb;
   color: #ffffff;
+  border: 1px solid #6f20fb;
 }
+
+.active {
+  background: #6f20fb;
+  color: #fff;
+  border: 1px solid #6f20fb;
+}
+
 .withIcons {
   gap: 6px;
 }
-
 .text {
   @include m.font(16px, 500);
   white-space: nowrap;

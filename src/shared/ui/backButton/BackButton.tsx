@@ -1,5 +1,5 @@
 import styles from './BackButton.module.scss'
-import { QuestArrowLeft } from "@/shared/assets/icons/questArrowLeft"
+import { QuestArrowLeft } from "@/shared/assets/components/questArrowLeft"
 
 import { Link } from "react-router-dom"
 

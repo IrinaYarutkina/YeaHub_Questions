@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 type Props = {
@@ -12,13 +11,13 @@ export const useQuestionNavigation = ({prevId, nextId} : Props) => {
 
   const goPrev = () => {
     if (prevId) {
-      navigate(`/questions/public-questions/${prevId}`);
+      navigate(`/questions/${prevId}`);
     }
   }
 
   const goNext = () => {
     if(nextId) {
-      navigate(`/questions/public-questions/${nextId}`);
+      navigate(`/questions/${nextId}`);
     }
     }
 

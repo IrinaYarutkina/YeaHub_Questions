@@ -20,3 +20,11 @@ export const RATING_LEVELS: ItemLevels = [
   { id: 4, title: "4", value: 4 },
   { id: 5, title: "5", value: 5 },
 ];
+
+export type Filters = { 
+  specializationId: number | null;
+  skillId: number[];
+  complexity: number[];
+  rate: number;
+  search?: string;
+}
