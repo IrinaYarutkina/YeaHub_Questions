@@ -30,3 +30,14 @@ export type QuestionsResponse = {
   limit: number;
   total: number;
 };
+
+export type QuestionsParams = {
+  page?: number
+	limit?: number
+	title?: string
+	specialization?: string
+  skills?: string
+	complexity?: string
+	rate?: string
+	keywords?: string
+}
