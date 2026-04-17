@@ -1,6 +1,6 @@
-import { Logo } from "@/shared/ui/Logo";
+import { Logo } from "@/shared/ui";
 import styles from "./Header.module.scss";
-import { Container } from "@/shared/ui/container";
+import { Container } from "@/shared/ui";
 import { ROUTES } from "@/shared/config";
 import { NavLink } from "react-router-dom";
 

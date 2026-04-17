@@ -5,7 +5,7 @@ import { QuestionNextBack } from "@/features/questionNextBack"
 import { useParams } from "react-router-dom";
 import styles from './questionWidgetBlock.module.scss'
 import { BackButton } from "@/shared/ui/backButton/BackButton";
-import { QuestionHeader } from "@/entities/Questions/ui/questionHeader";
+import { QuestionHeader } from "@/entities/Questions/ui";
 
 
 export const QuestionWidgetBlock = () => {

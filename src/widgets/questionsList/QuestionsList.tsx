@@ -1,26 +1,26 @@
 import styles from "./QuestionsList.module.scss";
 import { useGetQuestionsQuery } from "@/entities/Questions/api/questionsApi";
-import { Pagination } from "@/shared/ui/pagination";
-import { useState } from "react";
-import { QuestionInfo } from "@/entities/Questions/ui/questionInfo";
+import { Pagination } from "@/shared/ui/";
+import { QuestionInfo } from "@/entities/Questions/ui";
+import { useFiltersQuestions } from "@/features/filters";
 
-export const QuestionsList = function () {
-  const [currentPage, setCurrentPage] = useState(1);
-  const { data, isLoading } = useGetQuestionsQuery({ page: currentPage });
+export const QuestionsList = () => {
+
+  const {
+    objWithFilters, 
+    filtersInApi, 
+    updatesFilters,
+    // clearFilters
+	} = useFiltersQuestions()
+
+  const currentPage = objWithFilters.page; 
+
+
+  const { data, isLoading } = useGetQuestionsQuery(filtersInApi);
   console.log(data);
   const questions = data?.data ?? [];
   const totalPages = Math.ceil((data?.total ?? 0) / (data?.limit ?? 1));
 
-
-  // const [filters, setFilters] = useState({
-  //   specializationId: null,
-  //   skillIds: [],
-  //   complexity: [],
-  //   rating: null,
-  //   search: "",
-  // });
-
-  // const filteredQuestions = useFilteredQuestions(questions, filters);
 
   if (isLoading) return <p> Загрузка!</p>;
   return (
@@ -42,7 +42,7 @@ export const QuestionsList = function () {
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={setCurrentPage}
+        onPageChange={(page) => updatesFilters({ page })}
       />
     </div>
   );

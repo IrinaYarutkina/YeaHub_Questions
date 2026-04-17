@@ -1,0 +1,14 @@
+@use "../../styles/mixins.scss" as m;
+
+.button{ 
+  @include m.button(48px, 15px 30px 15px 30px, none, 12px);
+  line-height: 1;
+  border: none;
+  @include m.font(18px, 500);
+  background-color: #6A0BFF;
+  color: #FFFFFF;
+}
+
+.button:hover {
+  background-color: #5509cc;
+}

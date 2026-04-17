@@ -10,15 +10,15 @@ export const useFiltersQuestions = () => {
 
   const objWithFilters = useMemo<QueryParams>(() => {
 
-    const skillsParams = searchParams.get('skills');
     const complexityParams = searchParams.get('complexity');
     const rateParams = searchParams.get('rate');
     
     return {
       page: Number(searchParams.get('page')) || 1, 
       search: searchParams.get('search') || undefined,
-      specialization: searchParams.get('specialization') || '11',
-      skills: skillsParams ? skillsParams.split(',').map(Number).filter(skill => !isNaN(skill)) : undefined,
+      specialization: searchParams.get('specialization') ?? '11',
+
+      skills: searchParams.get('skills')?.split(',').map(Number).filter(n => !isNaN(n)) || undefined,
       complexity: complexityParams ? complexityParams.split(',').map(Number).filter(comp => !isNaN(comp)) : undefined,
       rate: rateParams ? rateParams.split(',').map(Number).filter(rate => !isNaN(rate)) : undefined,
       keywords: searchParams.get('keywords') || undefined,
@@ -38,11 +38,11 @@ export const useFiltersQuestions = () => {
     }
   }, [objWithFilters])
 
-  const updatesFilters = useCallback(( updates: QueryParams) => {
+  const updatesFilters = useCallback(( updates: Partial<QueryParams>) => {
     setSearchParams(prev => {
       const newParams = new URLSearchParams(prev)
 
-      console.log(Object.keys(updates))
+      console.log(updates)
       if (Object.keys(updates).some(key => key !== 'page')) {
         newParams.set('page', '1')
         console.log(newParams)

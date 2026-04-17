@@ -1,5 +1,5 @@
 //кажется это надо в shared?
-import { Accordeon } from "@/shared/ui/question-accordeon";
+import { Accordeon } from "@/shared/ui";
 import styles from "./questionInfo.module.scss";
 import { ROUTES } from "@/shared/config";
 import { Link } from "react-router-dom";

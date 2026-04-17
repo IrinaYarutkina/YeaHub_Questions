@@ -1,4 +1,4 @@
-import { Container } from "@/shared/ui/container";
+import { Container } from "@/shared/ui";
 import { Header } from "@/widgets/Header";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";

@@ -1,6 +1,6 @@
 @use "../../../../shared/styles/mixins.scss" as m;
 
-.levels {
+.complexityLevels {
   @include m.flex(flex, column, flex-start, flex-start);
   gap: 8px;
 }

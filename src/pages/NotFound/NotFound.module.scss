@@ -1,0 +1,23 @@
+@use "../../shared/styles/mixins.scss" as m;
+
+.container{
+  margin: 100px auto;
+  @include m.flex(flex, column, center, center);
+  background-color: #FFFFFF;
+  padding: 80px 0; 
+  border-radius: 24px;
+}
+
+.title{
+  @include m.font(100px, 700);
+  color: #141414; 
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+.text{
+  @include m.font(20px, 500);
+  color: #474747;
+}

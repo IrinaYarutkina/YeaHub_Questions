@@ -32,7 +32,7 @@ export type QuestionsResponse = {
 };
 
 export type QuestionsParams = {
-  page?: number
+  page: number
 	limit?: number
 	title?: string
 	specialization?: string

@@ -1,5 +1,5 @@
 export {BackButton} from './backButton/BackButton';
-
+export {Button} from './button/Button'
 export {Container} from './container/Container';
 export {FilterBlockTitle} from './filterBlockTitle/FilterBlockTitle';
 export {FilterButtonToggle} from './filterButton/FilterButtonToggle';

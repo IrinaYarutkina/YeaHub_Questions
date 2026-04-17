@@ -22,11 +22,11 @@ export const RATING_LEVELS: ItemLevels = [
 ];
 
 export type QueryParams ={
-  page: number;
-	search?: string;
-	specialization: string;
-	complexity?: number[];
-	rate?: number[];
-	skills?: number[];
-	keywords?: string;
+  page: number,
+	search?: string,
+	specialization: string,
+	complexity?: number[],
+	rate?: number[],
+	skills?: number[],
+	keywords?: string,
 }
