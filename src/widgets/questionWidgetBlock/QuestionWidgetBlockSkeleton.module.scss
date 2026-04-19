@@ -1,0 +1,15 @@
+@use '../../shared/styles/mixins.scss' as m;
+.questionWidget_Block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.container{
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 16px;
+  @include m.flex(flex, row, center, flex-start);
+  gap: 4px; 
+}

@@ -3,6 +3,7 @@ import { useGetQuestionsQuery } from "@/entities/Questions/api/questionsApi";
 import { Pagination } from "@/shared/ui/";
 import { QuestionInfo } from "@/entities/Questions/ui";
 import { useFiltersQuestions } from "@/features/filters";
+import { QuestionListSkeleton } from "./QuestionListSkeleton";
 
 export const QuestionsList = () => {
 
@@ -16,25 +17,25 @@ export const QuestionsList = () => {
   const currentPage = objWithFilters.page; 
 
 
-  const { data, isLoading } = useGetQuestionsQuery(filtersInApi);
+  const { data, isLoading, isFetching } = useGetQuestionsQuery(filtersInApi);
   console.log(data);
   const questions = data?.data ?? [];
   const totalPages = Math.ceil((data?.total ?? 0) / (data?.limit ?? 1));
 
+  const isPending = isLoading || isFetching
 
-  if (isLoading) return <p> Загрузка!</p>;
+  if (isPending) {
+    return <QuestionListSkeleton  />
+  }
+
   return (
     <div className={styles.container_wrap}>
       <div className={styles.questions}>
-        <h1 className={styles.title}> Вопросы {} </h1>
+        <h1 className={styles.title}> Вопросы </h1>
         <ul className={styles.list}>
           {questions.map((item) => (
             <li key={item.id}>
-              <QuestionInfo
-                title={item.title}
-                shortAnswer={item.shortAnswer}
-                id={item.id}
-              />
+              <QuestionInfo question={item}/>
             </li>
           ))}
         </ul>

@@ -17,7 +17,6 @@ export const FilterComplexity = ({value = [], onChange}: Props) => {
       onChange(value.filter(item => item !== complexity));
     }
   };
-  // if (isLoading) return <p>Загрузка...</p>; //потом заменить
   return (
     <div className={styles.complexityLevels}>
       <FilterBlockTitle titleBlock="Уровень сложности" />

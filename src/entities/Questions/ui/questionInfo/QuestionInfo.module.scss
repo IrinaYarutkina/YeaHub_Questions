@@ -1,25 +1,4 @@
 @use "../../../../shared/styles/mixins.scss" as m;
-
-.questionInfo_filters {
-  @include m.flex(flex, row, start, center);
-  gap: 40px;
-}
-
-.questionInfo_text {
-  @include m.font(14px, 600);
-  color: #303030;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 6px 10px;
-  display: flex;
-  gap: 10px;
-}
-.questionInfo_level {
-  background-color: #6a0bff;
-  border-radius: 4px;
-  padding: 2px 4px;
-  color: #ffffff;
-}
 .link {
   display: flex;
   justify-content: start;
@@ -36,24 +15,4 @@
   width: 24px;
   height: 24px;
 }
-// .Question_InfoContainer {
-//   background-color: var(--grey-bg-color);
-//   padding: 6px 10px;
-//   display: inline-flex;
-//   border-radius: 8px;
-//   @include flex(flex, row, space-between, center);
-//   gap: 10px;
 
-//   .Question_InfoText {
-//     @include font(14px, 600);
-//     color: var(--black-text2);
-//   }
-//   .Question_InfoLevel {
-//     background-color: var(--accent-color);
-//     display: inline-flex;
-//     border-radius: 4px;
-//     padding: 2px 4px;
-//     @include font(14px, 600);
-//     color: var(--white-color);
-//   }
-// }

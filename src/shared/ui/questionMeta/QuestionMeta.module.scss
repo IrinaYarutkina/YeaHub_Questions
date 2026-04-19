@@ -1,0 +1,22 @@
+@use '../../styles/mixins.scss' as m;
+
+.container {
+  @include m.flex(flex, row, start, center);
+  gap: 16px;
+}
+
+.text {
+  @include m.font(14px, 600);
+  color: #303030;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  gap: 10px;
+}
+.level {
+  background-color: #6a0bff;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: #ffffff;
+}

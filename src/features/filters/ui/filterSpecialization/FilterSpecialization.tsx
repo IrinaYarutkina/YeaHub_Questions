@@ -3,6 +3,7 @@ import { FilterBlockTitle, FilterButtonToggle, FilterTag } from "@/shared/ui";
 
 import { useState } from "react";
 import { useGetSpecializationsQuery } from "@/entities/specialization/api/specializationApi";
+import { FilterSpecializationSkeleton } from "./FilterSpecializationSkeleton";
 
 type Props = {
   value?: string,
@@ -10,15 +11,18 @@ type Props = {
 }
 
 export const FilterSpecialization = ({value, onChange}: Props) => {
-  const { data: specializations = [], isLoading } = useGetSpecializationsQuery();
+  const { data: specializations = [], isLoading, isFetching } = useGetSpecializationsQuery();
   console.log(specializations)
 
   const [expanded, setExpanded] = useState(false);
   const visibleItems = expanded ? specializations : specializations.slice(0, 5);
 
-  if (isLoading) return <p>Загрузка...</p>; //потом заменить
-
+    const isPending = isLoading || isFetching;
   
+    if (isPending) {
+      return <FilterSpecializationSkeleton />
+    }
+
   return (
     <div className={styles.specialization}>
       <FilterBlockTitle titleBlock="Специализация" />

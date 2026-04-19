@@ -3,9 +3,10 @@ import styles from "./filterBlock.module.scss";
 import { SearchInput } from "@/shared/ui";
 
 
-export const FilterBlock = () => {
+export const FilterBlock = (  ) => {
   const {objWithFilters, updatesFilters } = useFiltersQuestions();
 
+  
   return (
     <div className={styles.filter_section}>
       {/* поиск */}

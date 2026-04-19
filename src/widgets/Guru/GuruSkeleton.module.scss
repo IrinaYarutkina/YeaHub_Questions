@@ -1,0 +1,8 @@
+@use '../../shared/styles/mixins.scss' as m;
+.container{
+  padding: 24px;
+  @include m.flex(flex, column, center, start);
+  gap: 4px;
+  border-radius: 16px;
+  background-color: #fff;
+}

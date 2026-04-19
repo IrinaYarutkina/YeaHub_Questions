@@ -6,5 +6,5 @@ export {FilterButtonToggle} from './filterButton/FilterButtonToggle';
 export {FilterTag} from './filterTag/FilterTag';
 export {Logo} from './Logo/Logo';
 export {Pagination} from './pagination/Pagination';
-export {Accordeon} from './question-accordeon/Accordeon';
+export {Accordeon} from './accordeon/Accordeon';
 export {SearchInput} from './searchInput/SearchInput';

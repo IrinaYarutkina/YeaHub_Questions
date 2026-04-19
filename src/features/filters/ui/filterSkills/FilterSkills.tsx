@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useGetSkillsQuery } from "@/entities/skills/api/skillsApi";
 import styles from "./FilterSkills.module.scss";
 import { FilterBlockTitle, FilterButtonToggle, FilterTag } from "@/shared/ui";
+import { FilterSkillsSkeleton } from "./FilterSkillsSkeleton";
 
 type Props = {
   value?: number[],
@@ -11,7 +12,7 @@ type Props = {
 
 export const FilterSkills = ({value = [], onChange, specializationId} : Props) => {
 
-  const { data: response, isLoading } = useGetSkillsQuery(
+  const { data: response, isLoading, isFetching } = useGetSkillsQuery(
     { specializations: specializationId },
 		{ skip: !specializationId });
 
@@ -20,7 +21,13 @@ export const FilterSkills = ({value = [], onChange, specializationId} : Props) =
   const [expanded, setExpanded] = useState(false);
   const visibleItems = expanded ? skills : skills.slice(0, 5);
 
-  if (isLoading) return <p>Загрузка...</p>; //потом заменить
+    const isPending = isLoading || isFetching;
+  
+    if (isPending) {
+      return <FilterSkillsSkeleton />
+    }
+
+
   const selectFilters = (id: number) => {
     if (!value.includes(id)){
       onChange([...value, id])

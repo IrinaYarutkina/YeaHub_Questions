@@ -7,7 +7,6 @@
   box-shadow: 0px 4px 10px var(--grey-shadow);
   overflow: hidden;
   padding: 0 24px 0 24px;
-  outline: 1px solid rgb(0, 255, 98);
 }
 .cardBtn {
   border: none;
@@ -17,7 +16,6 @@
   padding: 16px 24px;
 }
 .question {
-  // @include m.flex(flex, row, flex-start, center);
   display: flex;
   justify-content: flex-start;
 }

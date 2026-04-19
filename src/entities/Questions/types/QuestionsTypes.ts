@@ -21,7 +21,10 @@ export type Question = {
   // questionTopics:
   createdAt: string;
   updatedAt: string;
-  // createdBy: string;
+  createdBy: {
+    id: string
+    username: string
+  }
   // updatedBy: string;
 };
 export type QuestionsResponse = {

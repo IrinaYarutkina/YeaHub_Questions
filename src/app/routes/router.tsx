@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "../Layout";
-import { BaseQuestions } from "@/pages/QuestionsList";
-// import { Question } from "@/pages/Question/Question";
-import { QuestionWidgetBlock } from "@/widgets/questionWidgetBlock/questionWidgetBlock"; 
+import { BaseQuestions } from "@/pages/BaseQuestions";
 import { NotFound } from "@/pages/NotFound";
+import { Question } from "@/pages/Question/Question";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "questions/:id",
-        element: <QuestionWidgetBlock />,
+        element: <Question />,
       },
       {
         path: "*",

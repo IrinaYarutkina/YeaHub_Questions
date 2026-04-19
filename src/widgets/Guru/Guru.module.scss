@@ -1,0 +1,24 @@
+@use '../../shared/styles/mixins.scss' as m;
+
+
+.container{
+  padding: 24px;
+  @include m.flex(flex, column, center, start);
+  gap: 4px;
+  border-radius: 16px;
+  border: 1px solid #6a0bff;
+  background-color: #fff;
+}
+.name{
+  @include m.font(16px, 600);
+  color: #303030;
+}
+.spec{
+  @include m.font(16px, 500);
+  color: #757575;
+}
+
+.descriotion{
+  @include m.font(16px, 500);
+  color: #303030;
+}

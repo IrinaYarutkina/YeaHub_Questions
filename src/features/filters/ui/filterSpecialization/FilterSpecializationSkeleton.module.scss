@@ -1,0 +1,11 @@
+@use "../../../../shared/styles/mixins.scss" as m;
+
+.specialization {
+  @include m.flex(flex, column, flex-start, flex-start);
+  gap: 8px;
+}
+.filter_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

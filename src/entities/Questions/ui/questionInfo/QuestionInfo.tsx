@@ -4,26 +4,20 @@ import styles from "./questionInfo.module.scss";
 import { ROUTES } from "@/shared/config";
 import { Link } from "react-router-dom";
 import ArrowRight from "@/shared/assets/icons/ArrowRight.svg";
+import { QuestionMeta } from "@/shared/ui/questionMeta";
+import type { Question } from "../../types/QuestionsTypes";
 
 type Props = {
-  title: string;
-  shortAnswer: React.ReactNode;
-  id: number;
+  question: Question;
 };
-export const QuestionInfo = ({ title, shortAnswer, id }: Props) => {
+
+export const QuestionInfo = ({ question }: Props) => {
   return (
     <div className={styles.questionInfo}>
-      <Accordeon title={title}>
-        <div className={styles.questionInfo_filters}>
-          <p className={styles.questionInfo_text}>
-            Рейтинг: <span className={styles.questionInfo_level}> 4 </span>
-          </p>
-          <p className={styles.questionInfo_text}>
-            Сложность: <span className={styles.questionInfo_level}> 10 </span>
-          </p>
-        </div>
-        <div> {shortAnswer} </div>
-        <Link to={ROUTES.QUESTION_FOR_LINK(id)} className={styles.link}>
+      <Accordeon title={question.title}>
+        <QuestionMeta rate={question.rate} complexity={question.complexity}/>
+        <div> {question.shortAnswer} </div>
+        <Link to={ROUTES.QUESTION_FOR_LINK(question.id)} className={styles.link}>
           <p className={styles.link_text}> Подробнее</p>
           <img src={ArrowRight} className={styles.ArrowRight} />
         </Link>

@@ -1,0 +1,50 @@
+@use '../../shared/styles/mixins.scss' as m;
+
+
+.container{
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  @include m.flex(flex, column, start, start);
+  gap: 24px; 
+}
+
+.container_part{
+  @include m.flex(flex, column, start, start);
+  gap: 8px; 
+}
+.title{
+  @include m.font(16px, 500);
+  color: #474747;
+}
+
+.tags{
+  @include m.flex(flex, row, start, start);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag{
+  border: 1px solid #6a0bff;
+}
+
+.keywords{
+  @include m.flex(flex, row, start, start);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.word{
+  @include m.font(16px, 400);
+  color: #6a0bff;
+}
+
+.container_author{
+  @include m.flex(flex, row, start, start);
+  gap: 4px;
+  @include m.font(16px, 400);
+  color: #303030;
+}
+
+.authorName {
+  color: #6a0bff;
+}
+
