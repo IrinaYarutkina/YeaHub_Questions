@@ -1,5 +1,5 @@
 .skeleton {
-  background-color: #d6d6d6 ;
+  background-color: var(--color-black-400);
   border-radius: 8px;
   position: relative;
   overflow: hidden;
@@ -13,7 +13,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    var(--color-black-50)
     transparent
   );
   animation: shimmer 1.5s ease-in-out infinite;

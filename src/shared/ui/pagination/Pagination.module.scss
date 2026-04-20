@@ -15,12 +15,12 @@
 .inactive {
   border: none;
   background: transparent;
-  color: #474747;
+  color: var(--color-black-700);
   @include m.font(14px, 500);
 }
 .active {
-  color: #ffffff;
-  background-color: #6a0bff;
+  color: var(--color-white-900);
+  background-color: var(--color-purple-700);
   border-radius: 2px;
   border: none;
   padding: 2px 6px;

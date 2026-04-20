@@ -48,3 +48,16 @@
   color: var(--color-purple-700)
 }
 
+
+@media (max-width: 360px) {
+  .container{
+    padding: 12px;
+    gap: 12px; 
+  }
+  .tags{
+    @include m.flex(flex, column, start, start);
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+}

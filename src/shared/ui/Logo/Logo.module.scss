@@ -3,3 +3,9 @@
   @include m.flex(flex, row, space-between, center);
   gap: 8px;
 }
+
+@media (max-width: 360px) {
+  .logo_text{
+    display: none;
+  }
+}

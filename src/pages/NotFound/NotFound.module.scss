@@ -3,14 +3,14 @@
 .container{
   margin: 100px auto;
   @include m.flex(flex, column, center, center);
-  background-color: #FFFFFF;
+  background-color: var(--color-white-900);
   padding: 80px 0; 
   border-radius: 24px;
 }
 
 .title{
   @include m.font(100px, 700);
-  color: #141414; 
+  color: var(--color-black-text); 
 }
 .details{
   display: flex;
@@ -19,5 +19,5 @@
 }
 .text{
   @include m.font(20px, 500);
-  color: #474747;
+  color: var(--color-black-700); 
 }

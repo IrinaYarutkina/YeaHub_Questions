@@ -18,11 +18,14 @@ return (
       className={styles.button}
       onClick={goPrev}
     > 
-    <img src={QuestArrowLeft}/> Предыдущий  </button>
+      <img src={QuestArrowLeft}/> <p className={styles.text_btn}> Предыдущий</p>  
+    </button>
     <button 
       className={styles.button}
       onClick={goNext}
-    >Следующий <img src={QuestArrowRight }/> </button>
+    >
+      <p className={styles.text_btn}>Следующий</p> <img src={QuestArrowRight }/> 
+    </button>
   </div>
 )
 }

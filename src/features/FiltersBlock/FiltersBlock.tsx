@@ -1,12 +1,11 @@
 import {FilterComplexity, FilterRate, FilterSkills, FilterSpecialization, useFiltersQuestions } from "@/features/filters";
-import styles from "./filterBlock.module.scss";
+import styles from "./FiltersBlock.module.scss";
 import { SearchInput } from "@/shared/ui";
 
 
-export const FilterBlock = (  ) => {
+export const FiltersBlock = ( ) => {
   const {objWithFilters, updatesFilters } = useFiltersQuestions();
 
-  
   return (
     <div className={styles.filter_section}>
       {/* поиск */}

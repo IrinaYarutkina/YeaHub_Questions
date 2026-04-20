@@ -1,9 +1,12 @@
 import styles from "./QuestionsList.module.scss";
 import { useGetQuestionsQuery } from "@/entities/Questions/api/questionsApi";
-import { Pagination } from "@/shared/ui/";
+import { ModalWindow, Pagination } from "@/shared/ui/";
 import { QuestionInfo } from "@/entities/Questions/ui";
 import { useFiltersQuestions } from "@/features/filters";
 import { QuestionListSkeleton } from "./QuestionListSkeleton";
+import { FilterFeature } from "@/shared/assets/components/FilterFeature";
+import { useState } from "react";
+import { FiltersBlock } from "@/features/FiltersBlock";
 
 export const QuestionsList = () => {
 
@@ -15,7 +18,7 @@ export const QuestionsList = () => {
 	} = useFiltersQuestions()
 
   const currentPage = objWithFilters.page; 
-
+  const [isFilterOpen, setFilterOpen ] = useState(false);
 
   const { data, isLoading, isFetching } = useGetQuestionsQuery(filtersInApi);
   console.log(data);
@@ -31,7 +34,23 @@ export const QuestionsList = () => {
   return (
     <div className={styles.container_wrap}>
       <div className={styles.questions}>
-        <h1 className={styles.title}> Вопросы </h1>
+        <div className={styles.questions_header}> 
+          <h1 className={styles.title}> Вопросы </h1>
+          <button 
+          className={styles.btn_features}
+          onClick={()=>{setFilterOpen(true)}}
+          > 
+            <FilterFeature />
+          </button>
+        </div>
+        {isFilterOpen && (
+        <ModalWindow onClose={() => setFilterOpen(false)} className={styles.modalFilters}>
+          <div className={styles.mob_filters}> 
+            <FiltersBlock />
+          </div>
+        </ModalWindow >
+      )}
+
         <ul className={styles.list}>
           {questions.map((item) => (
             <li key={item.id}>

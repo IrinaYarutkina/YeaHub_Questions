@@ -1,5 +1,5 @@
 import { QuestionMeta } from '@/shared/ui/questionMeta';
-import styles from './FiltersQuestionInfo.module.scss';
+import styles from './InfoAboutFilters.module.scss';
 import type { Question } from '@/entities/Questions/types/QuestionsTypes';
 import { FilterTag } from '@/shared/ui';
 
@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-export const FiltersQuestionInfo = ({question, className} : Props) => {
+export const InfoAboutFilters = ({question, className} : Props) => {
 
   const {rate, complexity, questionSkills, keywords, createdBy} = question;
   return (

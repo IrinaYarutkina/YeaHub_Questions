@@ -13,9 +13,9 @@ $font_family: "Manrope";
   font-weight: $weight;
 }
 
-@mixin button($height, $padding, $border, $border-radius) {
-  height: $height;
-  padding: $padding;
-  border: $border;
-  border-radius: $border-radius;
-}
+// @mixin button($height, $padding, $border, $border-radius) {
+//   height: $height;
+//   padding: $padding;
+//   border: $border;
+//   border-radius: $border-radius;
+// }

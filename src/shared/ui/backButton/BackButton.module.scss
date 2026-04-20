@@ -8,12 +8,12 @@
 .icon {
   width: 20px;
   height: 20px;
-  color: #6A0BFF;
+  color: var(--color-purple-700);
   display: block; 
 }
 .title{
-  color: #6A0BFF;
+  color: var(--color-purple-700);
 }
 .title:hover{
-  color: #5509CC;
+  color: var(--color-purple-800);
 }

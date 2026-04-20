@@ -7,16 +7,23 @@
 
 .text {
   @include m.font(14px, 600);
-  color: #303030;
-  background-color: #f8f8f8;
+  color: var(--color-black-800);
+  background-color: var(--color-white-800);
   border-radius: 8px;
   padding: 6px 10px;
   display: flex;
   gap: 10px;
 }
 .level {
-  background-color: #6a0bff;
+  background-color: var(--color-purple-700);
   border-radius: 4px;
   padding: 2px 4px;
-  color: #ffffff;
+  color: var( --color-white-900);
+}
+
+@media (max-width: 360px) {
+.container {
+  @include m.flex(flex, column, start, center);
+  gap: 8px;
+  }
 }

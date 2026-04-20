@@ -6,3 +6,27 @@
   margin-top: 40px;
   margin-bottom: 80px;
 }
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.aside {
+  display: flex;
+  width: var(--aside-width);
+  position: sticky;
+  top: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .aside {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}

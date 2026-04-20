@@ -6,7 +6,7 @@ import styles from "./Logo.module.scss";
 
 export const Logo = () => (
   <Link to={ROUTES.QUESTIONS} className={styles.logo}>
-    <img src={logo} />
-    <img src={logo_text} />
+    <img src={logo} className={styles.logo}/>
+    <img src={logo_text} className={styles.logo_text}/>
   </Link>
 );

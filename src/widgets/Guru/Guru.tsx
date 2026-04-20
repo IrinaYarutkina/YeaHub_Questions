@@ -3,13 +3,14 @@ import type { Question } from '@/entities/Questions/types/QuestionsTypes';
 
 type Props = {
   question: Question;
+  className?: string;
 }
-export const Guru = ({question}: Props) => {
+export const Guru = ({question, className}: Props) => {
   const {createdBy, questionSpecializations} = question;
   const [spec, ...rest] = questionSpecializations[0].title.split(" ");
-  console.log(rest);
+  console.log(rest)
   return (
-      <div className={styles.container}> 
+      <div className={`${styles.container} ${className ?? ''}`}> 
         <h3 className={styles.name}> {createdBy.username} </h3>
         <p className={styles.spec}> {spec} Guru </p>
         <p className={styles.descriotion}> 

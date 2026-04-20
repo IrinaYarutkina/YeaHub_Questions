@@ -16,7 +16,7 @@ export const QuestionInfo = ({ question }: Props) => {
     <div className={styles.questionInfo}>
       <Accordeon title={question.title}>
         <QuestionMeta rate={question.rate} complexity={question.complexity}/>
-        <div> {question.shortAnswer} </div>
+        <div className={styles.shortAnswer}> {question.shortAnswer} </div>
         <Link to={ROUTES.QUESTION_FOR_LINK(question.id)} className={styles.link}>
           <p className={styles.link_text}> Подробнее</p>
           <img src={ArrowRight} className={styles.ArrowRight} />

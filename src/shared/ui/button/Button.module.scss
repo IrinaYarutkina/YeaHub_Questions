@@ -1,14 +1,15 @@
 @use "../../styles/mixins.scss" as m;
 
 .button{ 
-  @include m.button(48px, 15px 30px 15px 30px, none, 12px);
-  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 12px;
   border: none;
+  line-height: 1;
   @include m.font(18px, 500);
-  background-color: #6A0BFF;
-  color: #FFFFFF;
+  background-color: var(--color-purple-700);
+  color: var(--color-white-900);
 }
 
 .button:hover {
-  background-color: #5509cc;
+  background-color: var(--color-purple-800);
 }

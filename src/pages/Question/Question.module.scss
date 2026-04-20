@@ -13,3 +13,17 @@
   @include m.flex(flex, column, flex-start, stretch);
   gap: 20px; 
 }
+
+@media (max-width: 768px) {
+  .page_container{
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
+  .sidebar .sidebarFilters {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  
+}

@@ -16,6 +16,7 @@ export const QuestionWidgetBlock = ({question} : Props) => {
       <QuestionHeader 
         title={question.title}
         description={question.description}
+        data={question}
         />
       <QuestionNextBack 
       prevId = {question.id - 1}

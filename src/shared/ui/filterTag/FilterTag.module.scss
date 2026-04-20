@@ -3,21 +3,21 @@
 .buttonTag {
   display: inline-flex;
   padding: 6px 12px;
-  background: var(--white-color);
+  background: var(--color-white-900);
   border-radius: 12px;
-  border: 1px solid #bababa;
-  color: #303030;
+  border: 1px solid var(--color-black-200); 
+  color: var(--color-black-800);
 }
 .buttonTag:hover {
-  background: #6f20fb;
-  color: #ffffff;
-  border: 1px solid #6f20fb;
+  background: var(--color-purple-700);
+  color: var(--color-white-900);
+  border: 1px solid var(--color-purple-600);
 }
 
 .active {
-  background: #6f20fb;
-  color: #fff;
-  border: 1px solid #6f20fb;
+  background: var(--color-white-900);
+  color: var(--color-black-800);
+  border: 1px solid var(--color-purple-700); 
 }
 
 .withIcons {

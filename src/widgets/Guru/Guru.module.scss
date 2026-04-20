@@ -6,19 +6,19 @@
   @include m.flex(flex, column, center, start);
   gap: 4px;
   border-radius: 16px;
-  border: 1px solid #6a0bff;
-  background-color: #fff;
+  border: 1px solid var(--color-purple-700);
+  background-color: var(--color-white-900);
 }
 .name{
   @include m.font(16px, 600);
-  color: #303030;
+  color: var(--color-black-800);
 }
 .spec{
   @include m.font(16px, 500);
-  color: #757575;
+  color: var(--color-black-500);
 }
 
 .descriotion{
   @include m.font(16px, 500);
-  color: #303030;
+  color: var(--color-black-800);
 }

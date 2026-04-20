@@ -8,3 +8,4 @@ export {Logo} from './Logo/Logo';
 export {Pagination} from './pagination/Pagination';
 export {Accordeon} from './accordeon/Accordeon';
 export {SearchInput} from './searchInput/SearchInput';
+export {ModalWindow } from './ModalWindow/ModalWindow';
