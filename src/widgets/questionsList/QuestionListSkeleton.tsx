@@ -6,16 +6,18 @@ export const QuestionListSkeleton = () => {
   return (
     <div className={styles.container_wrap}>
       <div className={styles.questions}> 
-      <Skeleton width={110} height={30}/> 
+      <Skeleton width='25%' height={30}/> 
         <ul className={styles.list}>
           {Array.from({ length: 10 }).map((_, i) => (
             <li key={i}>
-              <Skeleton width={764} height={56}/>
+              <Skeleton width='100%' height={56}/>
             </li>
           ))}
         </ul>
       </div>
-      <Skeleton width={230} height={30} />
+      <div className={styles.pagination}> 
+        <Skeleton width='40%' height={30} />
+      </div>
     </div>
   );
 };

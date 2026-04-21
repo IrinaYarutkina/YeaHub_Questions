@@ -10,7 +10,7 @@ export const FilterSkillsSkeleton = () => {
         {Array.from({ length: 5 }).map((_, i) => (
           <Skeleton
             key={i}
-            width={100}
+            width='35%'
             height={35}
           />
         ))}

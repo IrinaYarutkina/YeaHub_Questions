@@ -5,10 +5,10 @@ import styles from './QuestionWidgetBlockSkeleton.module.scss'
 
 export const QuestionWidgetBlockSkeleton = () => {
   return (
-    <div className={styles.questionWidget_Block}> 
+  <div className={styles.questionWidget_Block}> 
     <QuestionHeaderSkeleton />
     <div className={styles.container}> 
-    <Skeleton width={340} height={50}/>
+    <Skeleton width='40%' height={50}/>
 
     </div>
     <QuestionAnswersSkeleton />

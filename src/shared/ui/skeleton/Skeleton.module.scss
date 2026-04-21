@@ -3,6 +3,8 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  display: block;
+  width: 100%;
 }
 
 .skeleton::after {

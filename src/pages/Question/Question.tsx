@@ -40,14 +40,3 @@ export const Question = () => {
   )
 };
 
-//   <nav className={styles.mob_nav}>
-// {MENU_ITEMS.map((item) => (
-//   <NavLink
-//     to={item.to}
-//     key={item.to}
-//     className={styles.header_label}
-//   >
-//     {item.label}
-//   </NavLink>
-// ))}
-// </nav>

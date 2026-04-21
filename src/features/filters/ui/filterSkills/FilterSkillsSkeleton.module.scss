@@ -3,9 +3,11 @@
 .skills {
   @include m.flex(flex, column, flex-start, flex-start);
   gap: 8px;
+  width: 100%;
 }
 .filter_buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
 }

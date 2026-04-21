@@ -1,13 +1,13 @@
 @use '../../shared/styles/mixins.scss' as m;
 
 .container_wrap {
-  @include m.flex(flex, column, center, center);
+  @include m.flex(flex, column, center, stretch);
   margin: 0 auto;
   padding: 24px 20px 40px 20px;
-  background-color: #ffffff;
+  background-color: var(--color-white-900);
   border-radius: 24px;
   gap: 40px;
-  box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.1);
+  box-shadow: 0px 4px 10px #6a63761a;
 }
 .questions {
   @include m.flex(flex, column, flex-start, stretch);
@@ -17,4 +17,11 @@
 .list {
   @include m.flex(flex, column, flex-start, stretch);
   gap: 24px;
+}
+.list li {
+  width: 100%;
+}
+
+.pagination{
+  @include m.flex(flex, column, center, center);
 }

@@ -9,7 +9,7 @@ import { GuruSkeleton } from "@/widgets/Guru/GuruSkeleton"
 export const QuestionSkeleton = () => {
   return (
   <div> 
-    <Skeleton  width={80} height={30} className={styles.btn_skeleton}/>
+    <Skeleton  width='10%' height={30} className={styles.btn_skeleton}/>
     
     <div className={styles.page_container}> 
       <QuestionWidgetBlockSkeleton />

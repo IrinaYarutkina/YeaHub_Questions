@@ -2,7 +2,6 @@
 
 .specialization {
   @include m.flex(flex, column, flex-start, flex-start);
-  // width: 400px;
   gap: 8px;
 }
 .filter_buttons {

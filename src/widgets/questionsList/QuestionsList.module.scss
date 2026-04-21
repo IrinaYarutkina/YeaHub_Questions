@@ -12,6 +12,7 @@
 .questions {
   @include m.flex(flex, column, flex-start, stretch);
   width: 100%;
+  min-width: 0;
   gap: 24px;
 }
 .questions_header{

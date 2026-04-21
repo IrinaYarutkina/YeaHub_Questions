@@ -35,7 +35,7 @@ export const FilterSkills = ({value = [], onChange, specializationId} : Props) =
       onChange(value.filter(item => item !== id))
     }
   }
-
+  
   return (
     <div className={styles.skills}>
       <FilterBlockTitle titleBlock="Навыки" />

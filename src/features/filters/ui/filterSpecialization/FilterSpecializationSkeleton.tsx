@@ -10,7 +10,7 @@ export const FilterSpecializationSkeleton = () => {
         {Array.from({ length: 5 }).map((_, i) => (
             <Skeleton
               key={i}
-              width={150}
+              width='40%'
               height={35}
             />
           ))}
